@@ -247,79 +247,189 @@ body {
 
 /* Responsive styles for mobile devices */
 @media (max-width: 600px) {
-  .title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #000;
-    text-align: center;
+  .main-bg {
+    padding: 16px;
+    padding-bottom: 40px;
+    background-size: cover;
   }
 
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .heading {
+    font-size: 1.2rem;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    text-align: center;
+    padding: 0 10px;
+  }
 
   .subtext {
-    font-size: 1rem;
+    font-size: 0.95rem;
     padding: 0 12px;
+    margin-bottom: 16px;
   }
 
   .form {
+    width: 95%;
     max-width: 100%;
-    padding: 20px 14px;
+    padding: 16px;
     border-radius: 12px;
+    margin: 0 auto 20px auto;
+    box-sizing: border-box;
   }
 
   .letter-box {
+    width: 100%;
     max-width: 100%;
     font-size: 1rem;
     padding: 10px;
+    box-sizing: border-box;
   }
 
   .input {
+    width: 100%;
     max-width: 100%;
     padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .email-instruction {
+    font-size: 0.9rem;
+    margin-top: 4px;
   }
 
   .blue-box {
-    padding: 14px 12px;
+    padding: 12px;
     border-radius: 10px;
+    width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
   }
 
-  .date-row, .custom-date-row, .date-input-row {
-    flex-direction: row;
-    gap: 8px;
-    align-items: center;
+  .date-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px;
   }
 
   .date-row.single-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .single-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .left-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .date-label {
+    font-size: 1rem;
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+
+  .date-label.right, .single-right {
+    margin-left: 0;
+    margin-top: 8px;
   }
 
   .preset-options {
-    gap: 12px;
+    display: flex;
     flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .preset-btn {
-    padding: 6px 10px;
-    font-size: 0.95rem;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    flex: 0 0 auto;
+  }
+
+  .date-input-row {
+    margin-top: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .custom-date-row {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    width: 100%;
   }
 
   .date-input, .blue-box .date-input {
-    padding: 6px 10px;
+    padding: 8px 10px;
     font-size: 1rem;
-    margin-left: 8px;
+    margin-left: 0;
+    margin-top: 8px;
+    width: auto;
+  }
+
+  select.date-input {
+    padding: 8px;
+    font-size: 0.95rem;
   }
 
   .submit-btn {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     font-size: 1rem;
+    margin-top: 16px;
   }
 
   .art {
     margin-top: 20px;
   }
+
+  .art img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .status {
+    font-size: 0.95rem;
+    text-align: center;
+  }
 }
 
+/* Extra small devices */
+@media (max-width: 380px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .heading {
+    font-size: 1.1rem;
+  }
+
+  .preset-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .form {
+    padding: 12px;
+  }
+}

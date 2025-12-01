@@ -1,8 +1,8 @@
 # Message In a Bottle 🍾
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/deploy-status.svg)](https://messageinabottle.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/deploy-status.svg)](https://messageinabottlebythuto.netlify.app)
 
-🌐 **Live Demo**: [messageinabottle.netlify.app](https://messageinabottle.netlify.app)
+🌐 **Live Demo**: [messageinabottlebythuto.netlify.app](https://messageinabottlebythuto.netlify.app)
 
 A web application that lets you write letters to your future self and receive them via email on a specified date.
 
