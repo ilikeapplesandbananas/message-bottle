@@ -8,14 +8,21 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+const PORT = process.env.PORT || 5001;
+
 const messages = [];
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'thutomclean@gmail.com',
-    pass: 'tpgybcsqyytxqqia',
+    user: process.env.EMAIL_USER || 'thutomclean@gmail.com',
+    pass: process.env.EMAIL_PASS || 'tpgybcsqyytxqqia',
   },
+});
+
+// Health check endpoint
+app.get('/', (req, res) => {
+  res.send('Message In a Bottle API is running');
 });
 
 app.post('/api/message', (req, res) => {
@@ -41,4 +48,4 @@ cron.schedule('* * * * *', () => {
   });
 });
 
-app.listen(5001, () => console.log('Server running on port 5001'));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

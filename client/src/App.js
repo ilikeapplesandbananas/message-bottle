@@ -48,7 +48,8 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('Sending...');
-    const res = await fetch('http://localhost:5001/api/message', {
+    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
+    const res = await fetch(`${API_URL}/api/message`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ letter, email, date }),
