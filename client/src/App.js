@@ -48,21 +48,27 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('Sending...');
-    const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
-    const res = await fetch(`${API_URL}/api/message`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ letter, email, date }),
-    });
-    if (res.ok) {
-      setStatus('Your message has been scheduled!');
-      setLetter('Dear Future Me,\n');
-      setEmail('');
-      setDate('');
-      setDuration('');
-      setCustomDate('');
-    } else {
-      setStatus('Error scheduling your message.');
+    
+    try {
+      const res = await fetch('/.netlify/functions/message', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ letter, email, date }),
+      });
+      
+      if (res.ok) {
+        setStatus('Your message has been scheduled! Check your email for confirmation.');
+        setLetter('Dear Future Me,\n');
+        setEmail('');
+        setDate('');
+        setDuration('');
+        setCustomDate('');
+      } else {
+        const data = await res.json();
+        setStatus(data.error || 'Error scheduling your message.');
+      }
+    } catch (error) {
+      setStatus('Error connecting to server. Please try again.');
     }
   };
 
