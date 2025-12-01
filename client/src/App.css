@@ -322,14 +322,17 @@ body {
   }
 
   .date-row.single-row {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 8px;
+    width: 100%;
   }
 
   .single-row {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 8px;
   }
 
@@ -341,14 +344,16 @@ body {
   }
 
   .date-label {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-right: 0;
-    margin-bottom: 4px;
+    margin-bottom: 0;
   }
 
   .date-label.right, .single-right {
-    margin-left: 0;
-    margin-top: 8px;
+    margin-left: auto;
+    margin-top: 0;
+    text-align: right;
+    font-size: 0.9rem;
   }
 
   .preset-options {
