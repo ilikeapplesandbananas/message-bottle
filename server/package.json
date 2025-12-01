@@ -1,0 +1,16 @@
+{
+  "name": "message-in-a-bottle-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.10.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
